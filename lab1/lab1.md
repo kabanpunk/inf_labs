@@ -134,7 +134,19 @@ kabanpunk@kabanpunk-vm:~$ grep -o 'Friday' crusoe.txt | wc -l
 
 ### Заменить в текстовом файле все слова “Friday” на “Saturday”
 ```console
-kabanpunk@kabanpunk-vm:~$ sed 's/Friday/Saturday/' crusoe.txt
+kabanpunk@kabanpunk-vm:~$ sed 's/Friday/Saturday/g' crusoe.txt
+```
+
+## Вывести строку, содержащую больше всего чисел
+```console
+kabanpunk@kabanpunk-vm:~$ touch in
+kabanpunk@kabanpunk-vm:~$ nano in
+kabanpunk@kabanpunk-vm:~$ cat in
+1 300
+2 3
+10
+kabanpunk@kabanpunk-vm:~$ cat in | awk 'BEGIN { m = -1; s = ""; } { if (NF > m) { m = NF; s = $0; } } END { print s "\n"; } '
+1 300
 ```
 
 ### Подсчитать сумму чисел по столбцам 
