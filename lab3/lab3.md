@@ -8,7 +8,7 @@ kabanpunk@kabanpunk-vm:~$ grep -o 'Friday' crusoe.txt | wc -l
 
 ### Заменить в текстовом файле все слова “Friday” на “Saturday”
 ```console
-kabanpunk@kabanpunk-vm:~$ sed 's/Friday/Saturday/g' crusoe.txt
+kabanpunk@kabanpunk-vm:~$ sed -i 's/Friday/Saturday/g' crusoe.txt
 ```
 
 ### Вывести строку, содержащую больше всего чисел
